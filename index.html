@@ -12,6 +12,15 @@
   <meta name="keywords" content="graphic designer NSW, web designer Valla, brand identity Australia, logo design mid-north coast, editorial design, freelance designer, website design small business">
   <meta name="author" content="Lorena Margieson">
   <meta name="robots" content="index, follow">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFRB1BR3HE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DFRB1BR3HE');
+  </script>
+
   <link rel="canonical" href="https://lorenamargieson.com/">
 
   <!-- Open Graph / Facebook -->
@@ -706,6 +715,16 @@
     }
     footer .logo-foot { display: flex; align-items: center; gap: 12px; }
     footer .logo-foot svg { height: 20px; width: auto; opacity: .7; }
+    .footer-right {
+      display: flex; align-items: center; gap: 24px;
+    }
+    .footer-ig {
+      display: flex; align-items: center; gap: 8px;
+      color: rgba(255,242,230,.45); text-decoration: none;
+      transition: color .2s;
+    }
+    .footer-ig:hover { color: rgba(255,242,230,.85); }
+    .footer-ig svg { width: 16px; height: 16px; flex-shrink: 0; }
 
     /* ══════════════════════════════════════════════
        REVEAL ANIMATIONS
@@ -740,17 +759,69 @@
     }
 
     @media (max-width: 768px) {
-      nav { padding: 0 20px; }
-      .nav-links { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      nav { padding: 0 20px; z-index: 300; }
+
+      /* Full-screen overlay menu */
+      .nav-links {
+        display: none;
+        position: fixed; top: 0; left: 0; right: 0; bottom: 0;
         flex-direction: column; justify-content: center; align-items: center;
-        background: rgba(5,33,2,.97); z-index: 200; gap: 24px; }
-      .nav-links.open { display: flex; }
-      .nav-links a { font-size: 14px; color: rgba(255,242,230,.7); }
-      nav.light-nav .nav-links a { color: rgba(255,242,230,.7); }
-      .nav-links .nav-cta { color: var(--mashed) !important; border-color: rgba(255,242,230,.35) !important; }
-      .nav-toggle { display: block; z-index: 201; position: relative; }
+        background: rgba(5,33,2,.98);
+        backdrop-filter: blur(12px);
+        z-index: 250; gap: 32px;
+        /* slide in from top */
+        opacity: 0; transform: translateY(-12px);
+        transition: opacity .3s ease, transform .3s ease;
+      }
+      .nav-links.open {
+        display: flex;
+        opacity: 1; transform: translateY(0);
+      }
+      .nav-links a {
+        font-size: 18px; letter-spacing: .12em;
+        color: rgba(255,242,230,.75);
+      }
+      nav.light-nav .nav-links a { color: rgba(255,242,230,.75); }
+      .nav-links .nav-cta {
+        color: var(--mashed) !important;
+        border-color: rgba(255,242,230,.35) !important;
+        font-size: 14px !important;
+        padding: 12px 28px !important;
+      }
+
+      /* Hamburger button — always on top */
+      .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40px; height: 40px;
+        z-index: 310;
+        position: relative;
+        background: none; border: none; cursor: pointer; padding: 0;
+      }
+      .nav-toggle span {
+        display: block;
+        width: 22px; height: 1.5px;
+        background: var(--mashed);
+        border-radius: 2px;
+        transition: transform .3s ease, opacity .3s ease, width .3s ease;
+        transform-origin: center;
+        position: absolute;
+      }
+      .nav-toggle span:nth-child(1) { transform: translateY(-6px); }
+      .nav-toggle span:nth-child(2) { transform: translateY(0); }
+      .nav-toggle span:nth-child(3) { transform: translateY(6px); }
+
+      /* Animate to X when open */
+      body.menu-open .nav-toggle span:nth-child(1) { transform: translateY(0) rotate(45deg); }
+      body.menu-open .nav-toggle span:nth-child(2) { opacity: 0; width: 0; }
+      body.menu-open .nav-toggle span:nth-child(3) { transform: translateY(0) rotate(-45deg); }
+
+      /* Keep hamburger lines white when menu is open (dark overlay behind) */
+      body.menu-open .nav-toggle span { background: var(--mashed) !important; }
+      /* On light sections (not menu-open), use dark colour */
       nav.light-nav .nav-toggle span { background: var(--green-bean); }
-      body.menu-open .nav-toggle span { background: var(--mashed); }
 
       .hero { padding: calc(var(--nav-h) + 40px) 22px 0; }
       .hero-headline { font-size: clamp(52px, 14vw, 80px); }
@@ -786,7 +857,8 @@
       .contact { padding: 80px 22px; }
       .contact-inner { grid-template-columns: 1fr; gap: 40px; }
 
-      footer { padding: 22px; flex-direction: column; gap: 12px; text-align: center; }
+      footer { padding: 22px; flex-direction: column; gap: 16px; text-align: center; }
+      .footer-right { flex-direction: column; gap: 10px; }
     }
 
     @media (max-width: 480px) {
@@ -1404,15 +1476,23 @@
 ══════════════════════════════════════════════ -->
 <footer>
   <div class="logo-foot">
-    <!-- Small icon mark in footer -->
     <svg viewBox="0 0 283.46 283.46" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <rect x="139.08" y="100.14" width="4.82" height="117.12" fill="#785f3b"/>
       <path fill="#785f3b" d="M141.49,163.64c-34.87,0-63.24-28.49-63.24-63.5h4.82c0,32.34,26.21,58.66,58.42,58.66s58.42-26.31,58.42-58.66h4.82c0,35.01-28.37,63.5-63.24,63.5Z"/>
       <path fill="#785f3b" d="M141.49,218.3c-42,0-76.17-34.31-76.17-76.48s34.17-76.48,76.17-76.48,76.17,34.31,76.17,76.48-34.17,76.48-76.17,76.48ZM141.49,70.19c-39.34,0-71.34,32.13-71.34,71.63s32,71.63,71.34,71.63,71.34-32.13,71.34-71.63-32-71.63-71.34-71.63Z"/>
     </svg>
-    <span>© 2026 Lorena Margieson</span>
+    <span>© 2026 Lorena Margieson · Valla, NSW · Gumbaynggirr Country</span>
   </div>
-  <div>Valla, NSW · Gumbaynggirr Country</div>
+  <div class="footer-right">
+    <a href="https://www.instagram.com/theregionaldesigner" target="_blank" rel="noopener" class="footer-ig" aria-label="Instagram — @theregionaldesigner">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r=".6" fill="currentColor" stroke="none"/>
+      </svg>
+      @theregionaldesigner
+    </a>
+  </div>
 </footer>
 
 
@@ -1450,18 +1530,34 @@
   // ── Mobile menu ──
   const toggle = document.getElementById('nav-toggle');
   const links  = document.getElementById('nav-links');
+
   toggle.addEventListener('click', () => {
     const open = links.classList.toggle('open');
     document.body.classList.toggle('menu-open', open);
-    toggle.setAttribute('aria-expanded', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    // Prevent background scroll when menu is open
+    document.body.style.overflow = open ? 'hidden' : '';
   });
-  // Close menu when any link is clicked
+
+  // Close menu when any nav link is clicked
   links.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
       links.classList.remove('open');
       document.body.classList.remove('menu-open');
       toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
     });
+  });
+
+  // Close menu on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && links.classList.contains('open')) {
+      links.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      toggle.focus();
+    }
   });
 
   // ── Scroll reveal ──
