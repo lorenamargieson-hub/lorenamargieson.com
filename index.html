@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
 
   <!-- ═══════════════════════════════════════════════
        SEO — FOUNDATIONAL PACKAGE
   ═══════════════════════════════════════════════ -->
   <title>Lorena Margieson — Graphic Designer & Web Designer, NSW</title>
-  <meta name="description" content="Graphic designer & Co-Founder based in Valla, NSW. 15+ years in brand identity, web design, editorial & product. Modern websites from $990 — no monthly fees.">
-  <meta name="keywords" content="graphic designer NSW, web designer Valla, brand identity Australia, logo design mid-north coast, editorial design, freelance designer, website design small business">
+  <meta name="description" content="Graphic designer & Co-Founder based on the Mid-North Coast, NSW. 15+ years in brand identity, web design, editorial & product. Modern websites from $990 — no monthly fees.">
+  <meta name="keywords" content="graphic designer NSW, web designer mid-north coast, brand identity Australia, logo design mid-north coast, editorial design, freelance designer, website design small business">
   <meta name="author" content="Lorena Margieson">
   <meta name="robots" content="index, follow">
   <!-- Google Analytics -->
@@ -27,20 +29,20 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lorenamargieson.com/">
   <meta property="og:title" content="Lorena Margieson — Graphic Designer & Web Designer">
-  <meta property="og:description" content="15+ years across brand, editorial, product & web. Co-Founder of Booking My Surf. Freelance from Valla, NSW.">
+  <meta property="og:description" content="15+ years across brand, editorial, product & web. Co-Founder of Booking My Surf. Freelance from the Mid-North Coast, NSW.">
   <meta property="og:image" content="https://lorenamargieson.com/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Lorena Margieson — Graphic Designer & Co-Founder, Valla NSW">
+  <meta property="og:image:alt" content="Lorena Margieson — Graphic Designer & Co-Founder, Mid-North Coast NSW">
   <meta property="og:locale" content="en_AU">
   <meta property="og:site_name" content="Lorena Margieson">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Lorena Margieson — Graphic Designer & Web Designer">
-  <meta name="twitter:description" content="15+ years across brand, editorial, product & web. Freelance from Valla, NSW.">
+  <meta name="twitter:description" content="15+ years across brand, editorial, product & web. Freelance from the Mid-North Coast, NSW.">
   <meta name="twitter:image" content="https://lorenamargieson.com/og-image.jpg">
-  <meta name="twitter:image:alt" content="Lorena Margieson — Graphic Designer & Co-Founder, Valla NSW">
+  <meta name="twitter:image:alt" content="Lorena Margieson — Graphic Designer & Co-Founder, Mid-North Coast NSW">
 
   <!-- Schema.org structured data -->
   <script type="application/ld+json">
@@ -54,7 +56,7 @@
     "telephone": "+61412412079",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Valla",
+      "addressLocality": "Mid-North Coast",
       "addressRegion": "NSW",
       "addressCountry": "AU"
     },
@@ -483,6 +485,51 @@
       color: var(--green-bean);
     }
     .proj-arrow svg { width: 14px; height: 14px; }
+
+    /* ── Brand Identity tabs ── */
+    .project-tabs { cursor: default; }
+    .project-tabs:hover::after { opacity: 0; } /* suppress row hover bg */
+    .project-tabs:hover .proj-title { color: var(--ink); } /* suppress title hover */
+
+    .bi-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .bi-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 16px;
+      border: 1px solid var(--hair);
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      transition: background .2s, border-color .2s, color .2s;
+      cursor: pointer;
+    }
+
+    .bi-tab:hover {
+      background: var(--green-bean);
+      border-color: var(--green-bean);
+      color: var(--mashed);
+    }
+
+    .bi-tab:hover .bi-tab-arrow { stroke: var(--mashed); }
+
+    .bi-tab-arrow {
+      width: 11px;
+      height: 11px;
+      stroke: var(--green-bean);
+      flex-shrink: 0;
+      transition: stroke .2s;
+    }
 
     /* ══════════════════════════════════════════════
        SERVICES
@@ -1017,7 +1064,7 @@
       <span class="sep">·</span>
       Q2 '26
       <span class="sep">·</span>
-      Valla, NSW
+      Mid-North Coast, NSW
     </div>
 
     <!-- Big type -->
@@ -1086,7 +1133,7 @@
       <h2 class="section-title">Projects I'm<br><em>proud of.</em></h2>
     </div>
     <div class="work-header-right">
-      A decade of collaborations across editorial publishing, homewares, botany, surf travel &amp; small-business branding — from São Paulo to the Torres Strait to Valla.
+      A decade of collaborations across editorial publishing, homewares, botany, surf travel &amp; small-business branding — from São Paulo to the Torres Strait to the Mid-North Coast.
     </div>
   </div>
 
@@ -1123,7 +1170,7 @@
     </a>
 
     <!-- 02 — abcDesign -->
-    <a href="#contact" class="project reveal reveal-delay-1" role="listitem" aria-label="abcDesign magazine project">
+    <a href="https://www.instagram.com/p/DXnhIKIkovD/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener" class="project reveal reveal-delay-1" role="listitem" aria-label="abcDesign magazine project — opens on Instagram">
       <div class="proj-num">02</div>
       <div class="proj-body">
         <div class="proj-header">
@@ -1151,7 +1198,7 @@
     </a>
 
     <!-- 03 — Torres Strait Islands -->
-    <a href="#contact" class="project reveal reveal-delay-2" role="listitem" aria-label="Torres Strait Islands project">
+    <a href="https://www.instagram.com/p/DXqKDFukp7_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener" class="project reveal reveal-delay-2" role="listitem" aria-label="Torres Strait Islands project — opens on Instagram">
       <div class="proj-num">03</div>
       <div class="proj-body">
         <div class="proj-header">
@@ -1179,7 +1226,7 @@
     </a>
 
     <!-- 04 — Brand Identity -->
-    <a href="#contact" class="project reveal" role="listitem" aria-label="Brand identity work">
+    <div class="project project-tabs reveal" role="listitem" aria-label="Brand identity work">
       <div class="proj-num">04</div>
       <div class="proj-body">
         <div class="proj-header">
@@ -1200,14 +1247,30 @@
           <span class="proj-tag">Print</span>
           <span class="proj-tag">Packaging</span>
         </div>
+        <!-- Brand Identity Tabs -->
+        <div class="bi-tabs" role="tablist" aria-label="Brand identity projects">
+          <a href="https://www.instagram.com/p/C5Rn_mmhpTV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener" class="bi-tab" role="tab" aria-label="Ocean Spirit — view on Instagram">
+            <span class="bi-tab-label">Ocean Spirit</span>
+            <svg class="bi-tab-arrow" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6"/></svg>
+          </a>
+          <a href="https://www.instagram.com/p/DXnv4ubgEv4/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener" class="bi-tab" role="tab" aria-label="Petal to the Metal — view on Instagram">
+            <span class="bi-tab-label">Petal to the Metal</span>
+            <svg class="bi-tab-arrow" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6"/></svg>
+          </a>
+          <a href="https://www.instagram.com/p/DXoHrLVkrWv/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener" class="bi-tab" role="tab" aria-label="Fernanda Ribeiro — view on Instagram">
+            <span class="bi-tab-label">Fernanda Ribeiro</span>
+            <svg class="bi-tab-arrow" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6"/></svg>
+          </a>
+          <a href="https://www.instagram.com/p/DXqKIv7EnMJ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener" class="bi-tab" role="tab" aria-label="Hearns Hobbies — view on Instagram">
+            <span class="bi-tab-label">Hearns Hobbies</span>
+            <svg class="bi-tab-arrow" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 10L10 2M4 2h6v6"/></svg>
+          </a>
+        </div>
       </div>
-      <div class="proj-arrow" aria-hidden="true">
-        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 11L11 3M5 3h6v6"/></svg>
-      </div>
-    </a>
+    </div>
 
     <!-- 05 — Lisa Pollock -->
-    <a href="#contact" class="project reveal reveal-delay-1" role="listitem" aria-label="Art From the Heart project">
+    <a href="https://www.instagram.com/p/DXqZJSYAGwl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener" class="project reveal reveal-delay-1" role="listitem" aria-label="Art From the Heart — opens on Instagram">
       <div class="proj-num">05</div>
       <div class="proj-body">
         <div class="proj-header">
@@ -1318,7 +1381,7 @@
   <div class="about-inner">
     <div class="about-text reveal">
       <div class="section-eyebrow">About</div>
-      <p class="about-lead">A graphic designer of <em>15 years</em>, working across brand, editorial, product and web from <em>Valla, NSW</em>.</p>
+      <p class="about-lead">A graphic designer of <em>15 years</em>, working across brand, editorial, product and web from the <em>Mid-North Coast, NSW</em>.</p>
       <div class="about-body">
         <p>Currently <strong>Co-Founder and Head of Product and Design at Booking My Surf</strong>, where I shape the brand, the product and every touchpoint in between. Alongside that, I maintain a small freelance practice — a considered, selective approach to clients and fully remote collaboration.</p>
         <p class="subtle">My work is grounded in clear communication, strong systems and long-term thinking. I have developed a focus on educational and community-based projects, particularly within <strong style="color:var(--cabernet); font-weight:500">First Nations contexts</strong>, where cultural respect and the protection of knowledge are essential.</p>
@@ -1481,7 +1544,7 @@
       <path fill="#785f3b" d="M141.49,163.64c-34.87,0-63.24-28.49-63.24-63.5h4.82c0,32.34,26.21,58.66,58.42,58.66s58.42-26.31,58.42-58.66h4.82c0,35.01-28.37,63.5-63.24,63.5Z"/>
       <path fill="#785f3b" d="M141.49,218.3c-42,0-76.17-34.31-76.17-76.48s34.17-76.48,76.17-76.48,76.17,34.31,76.17,76.48-34.17,76.48-76.17,76.48ZM141.49,70.19c-39.34,0-71.34,32.13-71.34,71.63s32,71.63,71.34,71.63,71.34-32.13,71.34-71.63-32-71.63-71.34-71.63Z"/>
     </svg>
-    <span>© 2026 Lorena Margieson · Valla, NSW · Gumbaynggirr Country</span>
+    <span>© 2026 Lorena Margieson · Mid-North Coast, NSW · Gumbaynggirr Country</span>
   </div>
   <div class="footer-right">
     <a href="https://www.instagram.com/theregionaldesigner" target="_blank" rel="noopener" class="footer-ig" aria-label="Instagram — @theregionaldesigner">
